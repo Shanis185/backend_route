@@ -4,7 +4,9 @@ from pydantic import BaseModel
 from typing import List
 import osmnx as ox
 import networkx as nx
-
+from database import engine
+from models import Base
+Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="AccessibleRouteAPI",
     description="Routing + accessibility scoring for Kochi",
@@ -108,3 +110,4 @@ def get_route(req: RouteRequest):
         accessibility_label=label,
         points=points
     )
+
