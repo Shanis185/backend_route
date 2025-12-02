@@ -3,4 +3,11 @@ uvicorn
 osmnx
 networkx
 scikit-learn
-pydantic
+psycopg2-binary
+sqlalchemy
+alembic
+ultralytics
+pillow
+shapely
+rasterio
+requests
